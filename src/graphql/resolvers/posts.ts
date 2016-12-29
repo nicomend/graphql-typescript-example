@@ -15,13 +15,13 @@ export const resolveFunctions = {
             let post: IPost = {
                 description: description,
                 imageUrl: imageUrl,
-                id: new Date().getTime().toString(),
+                id: new Date().getTime(),
                 userId: 1,
             };
             database.posts.push(post);
             return post;
         },
-        deletePost(root, {id}:{id: string}): IPost {
+        deletePost(root, {id}:{id: number}): IPost {
             let index = database.posts.findIndex((post) => post.id === id);
             if (index > -1) {
                 return database.posts.splice(index, 1)[0];
