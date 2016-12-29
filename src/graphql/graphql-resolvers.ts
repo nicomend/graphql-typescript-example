@@ -1,10 +1,7 @@
-import {PostsResolver} from "./resolvers/posts";
-import {UsersResolvers} from "./resolvers/users";
+import {resolveFunctions as usersResolve} from "./resolvers/users";
+import {merge} from 'lodash';
+import {resolveFunctions as postResolve} from "./resolvers/posts";
 
-const graphqlResolvers: any = Object.assign(
-    {},
-    PostsResolver.get(),
-    UsersResolvers.get()
-);
+const graphqlResolvers = merge(postResolve, usersResolve);
 
 export default graphqlResolvers;

@@ -5,13 +5,14 @@ export const database: Database = {
             description: 'wowowo',
             imageUrl: 'http://wallpaper-gallery.net/images/image/image-13.jpg',
             userId: 1,
-            id: new Date().getTime().toString()
+            id: new Date().getTime()
         }
     ],
     users: [
         {
             id: 1,
-            name: 'Nico'
+            name: 'Nico',
+            password: 'password'
         }
     ]
 };
