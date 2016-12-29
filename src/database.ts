@@ -1,4 +1,4 @@
-import {IPost, IUser} from "./models";
+import {IPost, IUser} from './models';
 export const database: Database = {
     posts: [
         {

@@ -1,0 +1,5 @@
+mutation Mutation{
+    createMovie{
+        name
+    }
+}

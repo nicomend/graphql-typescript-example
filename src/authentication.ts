@@ -1,12 +1,12 @@
-import * as express from "express";
+import * as express from 'express';
 import * as session from 'express-session';
 import * as cookieParser from 'cookie-parser';
 import * as bodyParser from 'body-parser';
-const passport = require("passport");
-const util = require("util");
+const passport = require('passport');
+const util = require('util');
 
 interface RequestWithUser extends express.Request {
-    user: {name: string}
+    user: {name: string};
 }
 
 const AUTH_FAILED_URL = '/failed';
